@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+void funkcija(char*m,char*n){
+
+    int o = 0;
+
+   while (m[o] == n[o]) {
+      if (m[o] == '\0' || n[o] == '\0')
+         break;
+      o++;
+   }
+
+   if (m[o] == '\0' && n[o] == '\0')
+      printf("Isti su");
+   else
+      printf("Nisu isti");
+}
+int main()
+{
+    char niz[20];
+    char niz2[20];
+    printf("Uneti prvi string: ");
+    gets(niz);
+    printf("Uneti drugi string: ");
+    gets(niz2);
+    funkcija(niz, niz2);
+    return 0;
+}

@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+void funkcija(char* niz, char karakter){
+
+    int j,i,x,br=0;
+
+    for (j=0; niz[j]!='\0'; ++j){
+        x=j;
+        } x=x+1;
+    for (i=0; i<x; i++){
+        if(niz[i]==karakter){
+            br++;
+            }
+        }
+        printf("%d", br);
+
+}
+int main()
+{
+    char niz[20];
+    char karakter;
+    printf("Uneti string: ");
+    gets(niz);
+    printf("Uneti karakter: ");
+    scanf("%c", &karakter);
+    funkcija(niz, karakter);
+    return 0;
+}

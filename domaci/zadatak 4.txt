@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdio.h>
+int main()
+{
+  int niz[100], duzina, c, pom=0;
+
+  printf("Uneti broj elemanata u nizu\n");
+  scanf("%d", &duzina);
+
+  printf("Uneti elemente: \n");
+
+  for (c = 0; c < duzina; c++)
+    scanf("%d", &niz[c]);
+
+  for (c = 1; c < duzina; c++)
+    if (niz[c] > niz[pom])
+      pom=c;
+
+  printf("Maksimum je %d", niz[pom]);
+  return 0;
+}

@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int n,y,z;
+    printf("Uneti dimenzije: ");
+    scanf("%d", &y);
+    int matrica[y][y];
+    for (n=0; n<y; n++)
+    {
+        for (z=0; z<y; z++)
+        {
+            printf("Uneti %d %d element matrice: ", n, z);
+            scanf("%d", &matrica[n][z]);
+        }
+    }
+    int matrica2[y][y];
+     for (n=0; n<y; n++)
+    {
+        for (z=0; z<y; z++)
+        {
+            matrica2[z][n]=matrica[n][z];
+        }
+    }
+    for (z=0; z<y; z++)
+    {
+        for (n=0; n<y; n++)
+        {
+            printf("%d", matrica2[z][n]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
