@@ -1,0 +1,52 @@
+#include <cmath>
+#include <iostream>
+
+using namespace std;
+
+class jkkTrougao {
+    private:
+        double a;
+        double b;
+
+    public:
+        jkkTrougao() { a = 3; b = 4; }
+
+        jkkTrougao(double aa, double bb){
+            a=aa;
+            b=bb;
+        }
+
+        void setA(double aa) { a = aa; }
+        void setB(double bb) { b = bb; }
+
+        double getA()  { return a; }
+        double getB() { return b; }
+
+        double getO() const{ return a + b; }
+        double getP() const {
+            double h = sqrt(pow(b,2) - pow(a/2,2));
+            return (a*h)/2;
+        }
+
+};
+
+int main(){
+
+    jkkTrougao t(5.5,4.2);
+
+    cout << "Duzina osnovice: " << t.getA() << endl;
+    cout << "Duzina kraka: " << t.getB() << endl;
+    cout << "Obim: " << t.getO() << endl;
+    cout << "Povrsina: " << t.getP() << endl << endl;
+
+    t.setA(8);
+    t.setB(5);
+
+    cout << "Duzina osnovice: " << t.getA() << endl;
+    cout << "Duzina kraka: " << t.getB() << endl;
+    cout << "Obim: " << t.getO() << endl;
+    cout << "Povrsina: " << t.getP() << endl << endl;
+
+
+    return 0;
+}
